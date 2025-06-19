@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - ROBYMAQ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #E4433D;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .login-box {
+      background-color: #5DB7FF;
+      width: 300px;
+      padding: 40px 30px;
+      border-radius: 30px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      background-color: #A6D5FF;
+      color: black;
+      border: 1px solid black;
+      padding: 10px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .label {
+      text-align: left;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">ROBYMAQ</div>
+
+  <h2>LOGIN</h2>
+
+  <div class="login-box">
+    <div class="label">User</div>
+    <input type="text" placeholder="Enter user" />
+
+    <div class="label">Password</div>
+    <input type="password" placeholder="Enter password" />
+
+    <button>Enter</button>
+  </div>
+</body>
+</html>
