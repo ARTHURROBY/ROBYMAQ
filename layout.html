@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout ROBYMAQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6faff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .layout {
+      position: relative;
+      width: 1000px;
+      height: 650px;
+      margin: auto;
+      background-color: white;
+      border: 2px solid #ccc;
+    }
+
+    .area {
+      position: absolute;
+      border: 2px solid black;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .area:hover {
+      background-color: rgba(0, 140, 255, 0.3);
+      transform: scale(1.03);
+    }
+
+    /* Colores por tipo (opcional) */
+    .azul { background-color: #a5d8ff; }
+    .verde { background-color: #d2f8d2; }
+    .rosa { background-color: #ffd5d5; }
+    .lila { background-color: #e3d7ff; }
+    .amarillo { background-color: #ffffcc; }
+
+    .psw {
+      background-color: #d3d3d3;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Layout de Áreas ROBYMAQ</h2>
+
+  <div class="layout">
+    <!-- J&R INN -->
+    <div class="area azul" style="top: 50px; left: 20px; width: 60px; height: 60px;" onclick="location.href='lista-rh.html'">RH</div>
+    <div class="area azul" style="top: 120px; left: 20px; width: 60px; height: 60px;" onclick="location.href='lista-lh.html'">LH</div>
+
+    <!-- J&R BRACE -->
+    <div class="area amarillo" style="top: 220px; left: 100px; width: 60px; height: 160px;" onclick="location.href='lista-jr-brace.html'">J&R<br>BRACE</div>
+
+    <!-- B/SIDE RH -->
+    <div class="area azul" style="top: 50px; left: 250px; width: 180px; height: 80px;" onclick="location.href='lista-bside-rh.html'">B/ SIDE MAIN RH</div>
+    <div class="area azul" style="top: 50px; left: 180px; width: 60px; height: 40px;" onclick="location.href='lista-cell-a.html'">CELL A</div>
+    <div class="area azul" style="top: 90px; left: 180px; width: 60px; height: 40px;" onclick="location.href='lista-cell-b.html'">CELL B</div>
+
+    <!-- B/SIDE LH -->
+    <div class="area amarillo" style="top: 140px; left: 250px; width: 180px; height: 80px;" onclick="location.href='lista-bside-lh.html'">B/ SIDE MAIN LH</div>
+    <div class="area amarillo" style="top: 140px; left: 180px; width: 60px; height: 40px;" onclick="location.href='lista-cell-b2.html'">CELL B</div>
+    <div class="area amarillo" style="top: 180px; left: 180px; width: 60px; height: 40px;" onclick="location.href='lista-cell-a2.html'">CELL A</div>
+
+    <!-- E/COMP -->
+    <div class="area rosa" style="top: 230px; left: 250px; width: 180px; height: 80px;" onclick="location.href='lista-ecomp-b.html'">E/COMP B</div>
+    <div class="area rosa" style="top: 320px; left: 250px; width: 180px; height: 80px;" onclick="location.href='lista-ecomp-a.html'">E/COMP A</div>
+
+    <!-- E/COMP A lateral -->
+    <div class="area verde" style="top: 50px; left: 460px; width: 100px; height: 180px;" onclick="location.href='lista-ecomp-a-right.html'">E/COMP A</div>
+
+    <!-- FLOOR MAIN -->
+    <div class="area lila" style="top: 250px; left: 460px; width: 100px; height: 100px;" onclick="location.href='lista-floor-main.html'">FLOOR<br>MAIN</div>
+
+    <!-- FRONT FLOOR -->
+    <div class="area verde" style="top: 420px; left: 250px; width: 180px; height: 40px;" onclick="location.href='lista-frt-floor.html'">FRT FLOOR</div>
+
+    <!-- RR FLOOR -->
+    <div class="area azul" style="top: 470px; left: 250px; width: 180px; height: 60px;" onclick="location.href='lista-rr-floor.html'">RR FLOOR</div>
+
+    <!-- PSW (sin función) -->
+    <div class="area psw" style="top: 550px; left: 300px; width: 80px; height: 30px;">PSW</div>
+
+    <!-- Dos recuadros vacíos (sin letras ni eventos) -->
+    <div class="area" style="top: 240px; left: 20px; width: 60px; height: 30px;"></div>
+    <div class="area" style="top: 300px; left: 20px; width: 60px; height: 30px;"></div>
+  </div>
+
+</body>
+</html>

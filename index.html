@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - ROBYMAQ</title>
-  <div class="fondo"></div>
   <style>
-    
-
     .fondo {
       position: fixed;
       top: 0; left: 0;
@@ -17,7 +14,7 @@
       background-size: cover;
       background-position: center;
       filter: blur(20px);
-      z-index: -3;
+      z-index: -1;
     }
     body {
       margin: 0;
@@ -30,7 +27,6 @@
       justify-content: center;
       height: 100vh;
     }
-
     .logo {
       position: absolute;
       top: 30px;
@@ -38,33 +34,17 @@
       font-size: 32px;
       font-weight: bold;
       color: #E4433D;
-      font-family: Arial, Helvetica, sans-serif, sans-serif;
+      font-family: Arial, sans-serif;
     }
-
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-
+    h2 { font-size: 30px; margin-bottom: 20px; }
     .login-box {
       background-color: #5DB7FF;
       width: 300px;
       padding: 40px 30px;
       border-radius: 30px;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
-
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
-      width: 100%;
-      padding: 8px;
-      margin: 10px 0 20px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-    }
-
+    .login-box input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 10px; border: none; }
     .login-box button {
       padding: 10px 20px;
       border: none;
@@ -72,39 +52,40 @@
       background-color: white;
       color: black;
       font-weight: bold;
-      font-size: 16px;
       cursor: pointer;
-      transition: all 0.3s ease;
     }
-
-    .label {
-      text-align: left;
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
-      color: black;
-    }
-
     .login-box button:hover {
-    background-color: rgb(0, 217, 255);
-    color: rgb(0, 0, 0);
-    transform: scale(1.05);
+      background-color: #00d9ff;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+  <div class="fondo"></div>
   <div class="logo">ROBYMAQ</div>
-
   <h2>LOGIN</h2>
-
   <div class="login-box">
     <div class="label">Usuario</div>
-    <input type="text" placeholder="Ingresa usuario" />
-
+    <input type="text" id="user" placeholder="Ingresa usuario" />
     <div class="label">Contraseña</div>
-    <input type="password" placeholder="Ingresa contraseña" />
-
-    <button>Enter</button>
+    <input type="password" id="pass" placeholder="Ingresa contraseña" />
+    <button onclick="login()">Enter</button>
+    <br /><br />
+    <button onclick="crearCuenta()">Crear cuenta</button>
   </div>
+  <script>
+  function login() {
+    const user = document.getElementById("user").value.trim();
+    const pass = document.getElementById("pass").value.trim();
+
+    if (user !== "" && pass !== "") {
+      window.location.href = "layout.html";
+    } else {
+      alert("Por favor, completa ambos campos.");
+    }
+  }
+</script>
+  <script src="script.js"></script>
+
 </body>
 </html>
